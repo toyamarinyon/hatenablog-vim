@@ -7,7 +7,7 @@ function! hatenablog#post()
 	call entry.setContentType('text/html')
 	call entry.setTitle(s:getTitle())
 	call entry.setContent(s:getContent())
-	echo 'call hatenablog#post!'
+	echo entry
 endfunction
 
 function! s:getTitle()
