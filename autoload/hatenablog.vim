@@ -3,7 +3,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 function! hatenablog#post()
-	let entry = webapi#atom#createEntry()
+	let entry = webapi#atom#newEntry()
 	call entry.setContentType('text/html')
 	call entry.setTitle(s:getTitle())
 	call entry.setContent(s:getContent())
