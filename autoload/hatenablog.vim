@@ -16,8 +16,6 @@ if !exists('g:hatenablog_config')
 				\}
 endif
 
-echo g:hatenablog_config
-
 function! hatenablog#post()
 	if !s:validateConfig()
 		echoerr 'configuration error. set g:hatenablog_config.'
@@ -25,11 +23,11 @@ function! hatenablog#post()
 	endif
 	
 	let entry = webapi#atom#newEntry()
-	call entry.setContentType('text/html')
 	call entry.setTitle(s:getTitle())
+	call entry.setContentType('text/html')
 	call entry.setContent(s:getContent())
 	call webapi#atom#createEntry(
-				\ s:api_base_url.g:hatenablog_config.domain.s:api_endpoint,  
+				\ s:api_base_url.g:hatenablog_config.username.'/'.g:hatenablog_config.domain.s:api_endpoint,  
 				\ g:hatenablog_config.username,  
 				\ g:hatenablog_config.password,  
 				\ entry
