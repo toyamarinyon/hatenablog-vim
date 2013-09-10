@@ -32,6 +32,7 @@ function! hatenablog#post()
 				\ g:hatenablog_config.password,  
 				\ entry
 				\)
+	echo 'Done! :)'
 endfunction
 
 function! s:getTitle()
@@ -43,7 +44,7 @@ endfunction
 
 function! s:getContent()
 	let offset = s:existTitleInBuffer() ? 2 : 1
-	return join(getline(offset, line('$')), '\n')
+	return join(getline(offset, line('$')), '')
 endfunction
 
 function! s:existTitleInBuffer()
