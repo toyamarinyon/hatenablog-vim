@@ -10,9 +10,9 @@ let s:api_endpoint = '/atom/entry'
 
 if !exists('g:hatenablog_config')
 	let g:hatenablog_config = {
-				\ 'username'  exists('$HATENABLOG_USERNAME') ? $HATENABLOG_USERNAME : '',
-				\ 'password'  exists('$HATENABLOG_PASSWORD') ? $HATENABLOG_PASSWORD : '',
-				\ 'domain'    exists('$HATENABLOG_DOMAIN') ? $HATENABLOG_DOMAIN : ''
+				\ 'username'  : exists('$HATENABLOG_USERNAME') ? $HATENABLOG_USERNAME : '',
+				\ 'password'  : exists('$HATENABLOG_PASSWORD') ? $HATENABLOG_PASSWORD : '',
+				\ 'domain'    : exists('$HATENABLOG_DOMAIN') ? $HATENABLOG_DOMAIN : ''
 				\}
 endif
 
